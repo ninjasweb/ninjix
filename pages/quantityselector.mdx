@@ -1,0 +1,48 @@
+# Quantity Selector
+
+```js filename="demo.js" {2} copy
+import { useState } from "react"
+import { Minus, Plus } from "lucide-react"
+
+export default function Component() {
+  const [quantity, setQuantity] = useState(1)
+
+  const decrement = () => {
+    setQuantity((prev) => Math.max(1, prev - 1))
+  }
+
+  const increment = () => {
+    setQuantity((prev) => prev + 1)
+  }
+
+  return (
+    <div className="flex items-center justify-center w-full max-w-xs mx-auto">
+      <button
+        onClick={decrement}
+        className="flex items-center justify-center w-10 h-10 text-gray-600 transition-colors rounded-full hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200"
+        aria-label="Disminuir cantidad"
+      >
+        <Minus className="w-4 h-4" />
+      </button>
+      <div className="flex items-center justify-center flex-1 mx-4">
+        <span className="text-2xl font-semibold" aria-live="polite">
+          {quantity}
+        </span>
+      </div>
+      <button
+        onClick={increment}
+        className="flex items-center justify-center w-10 h-10 text-gray-600 transition-colors rounded-full hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200"
+        aria-label="Aumentar cantidad"
+      >
+        <Plus className="w-4 h-4" />
+      </button>
+    </div>
+  )
+}
+```
+
+## External Component
+
+import QuantitySelector from "../components/Selectors/QuantitySelector"
+
+<QuantitySelector />
