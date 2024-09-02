@@ -1,0 +1,9 @@
+.flyer::after {
+  content: "";
+  width: 100%;
+  inset: 0;
+  background: url("/images/flyer_berlin.jpg");
+  position: absolute;
+  filter: blur(40px) saturate(400%);
+  z-index: 1;
+}

@@ -1,7 +1,7 @@
 {
   "index": "Introduction",
-  "quantityselector": "Quantity Selector",
-  "advanced": "Advanced (A Folder)",
+  "selectors": "Selectors",
+  "images": "Images",
   "about": {
     "title": "About",
     "type": "page"
