@@ -1,7 +1,7 @@
 import React, { useState } from "react"
 import { Upload, Link, Loader2, ImageIcon } from "lucide-react"
 
-const ImageAnalysisComponent = () => {
+const UploadImage = () => {
   const [imageUrl, setImageUrl] = useState("")
   const [previewUrl, setPreviewUrl] = useState("")
   const [isLoading, setIsLoading] = useState(false)
@@ -121,4 +121,4 @@ const ImageAnalysisComponent = () => {
   )
 }
 
-export default ImageAnalysisComponent
+export default UploadImage
